@@ -5,5 +5,12 @@ public class CounterApp {
 		Thread counter = new Thread(new Counter());
 		counter.start();
 		Scanner keyboard = new Scanner(System.in);
+		String s="start";
+		while(!s.equals("")){
+			s=keyboard.nextLine();
+		}
+		counter.interrupt();
+		keyboard.close();
 	}
 }
+
